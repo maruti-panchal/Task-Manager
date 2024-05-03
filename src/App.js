@@ -1,9 +1,5 @@
 import { useState } from "react";
-import React, { useEffect } from "react";
-const initialItems = [
-  { id: 1, description: "Passports", quantity: 2, packed: true },
-  { id: 2, description: "Socks", quantity: 12, packed: false },
-];
+
 
 function App() {
   const [items, setItems] = useState([]);
@@ -101,7 +97,7 @@ function TaskList({ item, onDeleteItem, onToggleItem }) {
 }
 
 function Item({ item, onDeleteItem, onToggleItem }) {
-  const [checked, setChecked] = useState(false);
+
 
   return (
     <li>
@@ -132,7 +128,7 @@ function Stats({ items }) {
   return (
     <footer className="stats">
       <em>
-        {percentage == 100
+        {percentage === 100
           ? "🤘 You Have Completed All Tasks 🚀"
           : `You have ${numItem} Task on your list, and you already Completed
         ${numPacked} (${percentage}%)`}
